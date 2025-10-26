@@ -1,4 +1,4 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "My Decap CMS Site"
-theme = "ananke"
+theme = "basic"
