@@ -2,6 +2,7 @@ backend:
   name: github
   repo: dieboard/decap-cms
   branch: feature-basic-decap-cms-site
+  auth_type: implicit
 
 media_folder: "site/static/img"
 public_folder: "img"
