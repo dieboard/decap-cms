@@ -4,8 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    window.onerror = function(message, source, lineno, colno, error) {
+      document.body.innerHTML = '<pre style="font-size: 1.2em; color: red;">' +
+        'An error occurred. This is likely due to the GitHub OAuth App not being configured correctly. Please see the instructions in the README.md file.\n\n' +
+        '---\n\n' +
+        'Technical Details:\n' +
+        'Error: ' + message + '\n' +
+        'Source: ' + source + '\n' +
+        'Line: ' + lineno + '\n' +
+        'Column: ' + colno + '\n' +
+        'StackTrace: ' + (error && error.stack ? error.stack : 'N/A') +
+        '</pre>';
+      return true;
+    };
+  </script>
 </head>
 <body>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
