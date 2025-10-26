@@ -4,36 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
+  <link rel="cms-config-url" href="config.yml?v=5">
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js?v=4"></script>
-  <script>
-    CMS.init({
-      config: {
-        backend: {
-          name: 'github',
-          repo: 'dieboard/decap-cms',
-          branch: 'feature-basic-decap-cms-site',
-          auth_type: 'implicit',
-        },
-        media_folder: 'site/static/img',
-        public_folder: 'img',
-        collections: [
-          {
-            name: 'blog',
-            label: 'Blog',
-            folder: 'site/content/posts',
-            create: true,
-            slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
-            fields: [
-              { label: 'Title', name: 'title', widget: 'string' },
-              { label: 'Publish Date', name: 'date', widget: 'datetime' },
-              { label: 'Body', name: 'body', widget: 'markdown' },
-            ],
-          },
-        ],
-      },
-    });
-  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
