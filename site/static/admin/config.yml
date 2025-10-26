@@ -1,6 +1,7 @@
 backend:
-  name: test-repo
-local_backend: true
+  name: github
+  repo: dieboard/decap-cms
+  branch: feature-basic-decap-cms-site
 
 media_folder: "site/static/img"
 public_folder: "img"
