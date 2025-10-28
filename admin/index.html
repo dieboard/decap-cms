@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <script src="https://unpkg.com/decap-cms@2.10.192/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'dieboard/decap-cms',
+          branch: 'feature-basic-decap-cms-site',
+          auth_type: 'implicit',
+        },
+        media_folder: 'media',
+        public_folder: 'media',
+        collections: [
+          {
+            name: 'posts',
+            label: 'Posts',
+            file: '_data/posts.json',
+            label_singular: 'Post',
+            description: 'All blog posts',
+            create: true,
+            fields: [
+              {
+                label: 'Post Collection',
+                name: 'posts',
+                widget: 'list',
+                fields: [
+                  { label: 'Title', name: 'title', widget: 'string' },
+                  { label: 'Publish Date', name: 'date', widget: 'datetime' },
+                  { label: 'Body', name: 'body', widget: 'markdown' },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    });
+  </script>
+</body>
+</html>

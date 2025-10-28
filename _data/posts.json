@@ -1,0 +1,9 @@
+{
+  "posts": [
+    {
+      "title": "My First Post",
+      "date": "2025-10-28T10:00:00Z",
+      "body": "This is my first post, managed by Decap CMS!"
+    }
+  ]
+}
